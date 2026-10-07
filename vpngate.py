@@ -533,7 +533,7 @@ def build_hosts_text(data):
 
 # edgetunnel 完整订阅 (vless://) 配置
 EDT_UUID = os.environ.get("EDT_UUID", "39f29897-f312-430a-a20f-2087ac63b18e")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "ed.edu-aaa.kdns.fr")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "edge.cnerasmus3.workers.dev")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://xuxk-cn.github.io/gate/sub.txt")
 
