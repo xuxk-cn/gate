@@ -51,7 +51,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://edgetunnel.xuxk3581.workers.dev/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://nm.edutra.eu.cc/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -471,7 +471,7 @@ EDGE_HOSTS = [
         "brandstudio.com:443,m.iyf.tv:443,iili.io:443,iskills.com:443,seo.07yue.com:443,"
         "i.111666.best:443,xiaoqi.de:443,totoro.im:443,47bt.com:443,macked.app:443,"
         "sharray.net:443,hashi.sbs:443,pttime.org:443,jojolsj.jojojing.top:443,"
-        "api-scout.reflexapi.net:443,www.libvio.site:443,ovpnspider.com:443,cm.edu.kg:443",
+        "api-scout.reflexapi.net:443,www.libvio.site:443,ovpnspider.com:443,cm.edu.kg:443,",
     ).split(",")
     if h.strip()
 ]
@@ -532,8 +532,8 @@ def build_hosts_text(data):
 
 
 # edgetunnel 完整订阅 (vless://) 配置
-EDT_UUID = os.environ.get("EDT_UUID", "96dd403e-bed9-455a-8e4b-0de2204b4993")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "plain.xuxk3581.workers.dev")
+EDT_UUID = os.environ.get("EDT_UUID", "39f29897-f312-430a-a20f-2087ac63b18e")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "edge.cnerasmus3.workers.dev")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://jerylihub.github.io/gate/sub.txt")
 
